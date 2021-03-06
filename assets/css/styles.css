@@ -1,0 +1,66 @@
+/* ---------------------------------------- */
+/* BASE */
+/* ---------------------------------------- */
+/*
+RESET
+*/
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+body, ul, h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+ul {
+  padding: 0;
+  list-style: none;
+}
+/*
+VARIABLES
+*/
+:root {
+  --color-reservia: #0065fc;
+  --color-reservia--light: #deebff;
+  --color-sncd--light: #f2f2f2;
+  --color-font--default: #111;
+  --font-family: 'Raleway', sans-serif;
+  --font-weight--bold: 700;
+  --font-weight--normal: 400;
+  --font-weight--light: 300;
+  --font-size--small: calc((14/16) * 1rem); /* 14px */
+  --font-size--default: calc((16/16) * 1rem); /* 16px */
+  --font-size--large: calc((18/16) * 1rem); /* 18px */
+  --font-size--xlarge: calc((24/16) * 1rem); /* 24px */
+  --line-height--default: 1.5;
+}
+
+/*
+CONTENT
+*/
+body {
+  font-family: var(--font-family);
+  color: var(--color-font--default);
+  font-weight: var(--font-weight--normal);
+  font-size: var(--font-size--default);
+  line-height: var(--line-height--default);
+}
+h1, h2 {
+  font-size: var(--font-size--xlarge); 
+}
+h3 {
+  font-size: var(--font-size--large); 
+}
+h4 {
+  font-size: var(--font-size--small); 
+}
+a {
+  color: var(--color-font--default);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--color-reservia);
+  text-decoration: underline;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
