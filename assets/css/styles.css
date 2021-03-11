@@ -23,9 +23,17 @@ fieldset {
 }
 button {
   -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   border: none;
 }
+input[type="checkbox"] {
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 /*
 VARIABLES
 */
@@ -349,4 +357,47 @@ SEARCH
   background-color: var(--color-sncd--light);
   border-radius: 1.5REM 0 0 1.5rem;
   font-size: var(--font-size--large); 
+}
+/*
+FILTERS
+*/
+.accomodations-filters {
+  margin: 2.5rem 0;
+}
+.accomodations-filters, .accomodations-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.accomodations-filter {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.accomodations-filters-legend {
+  margin-right: 2.5rem;
+  font-weight: var(--font-weight--bold);
+}
+.accomodations-filter-ico {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  background-color: var(--color-reservia--light);
+  color: var(--color-reservia);
+  border-radius: 3rem;
+}
+.accomodations-filter-label {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  margin-right: 2.5rem;
+  padding: 1rem 2rem 1rem 6rem;
+  font-weight: var(--font-weight--bold);
+  border: 2px solid #d9d9d9;
+  border-radius: 3rem;
 }
