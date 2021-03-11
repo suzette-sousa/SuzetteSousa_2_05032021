@@ -46,6 +46,7 @@ VARIABLES
   --font-weight--bold: 700;
   --font-weight--normal: 400;
   --font-weight--light: 300;
+  --font-size--xsmall: 1.2rem;
   --font-size--small: 1.4rem;
   --font-size--default: 1.6rem;
   --font-size--large: 1.8rem;
@@ -400,4 +401,17 @@ FILTERS
   font-weight: var(--font-weight--bold);
   border: 2px solid #d9d9d9;
   border-radius: 3rem;
+}
+
+/*
+COMPONENTS
+*/
+.ratings-wrap {
+  font-size: var(--font-size--xsmall); 
+}
+.ratings--on {
+  color: var(--color-reservia);
+}
+.ratings--off {
+  color: #d9d9d9;
 }
