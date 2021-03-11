@@ -17,6 +17,15 @@ ul {
   padding: 0;
   list-style: none;
 }
+fieldset {
+  padding: 0;
+  border: none;
+}
+button {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+}
 /*
 VARIABLES
 */
@@ -205,7 +214,7 @@ MAIN STRUCTURE
     "activities activities";
   }
 }
-.accomodations-search {
+.accomodations-search-wrap {
   grid-area: accsearch;
 }
 .accomodations-main {
@@ -308,4 +317,36 @@ ACTIVITIES
 }
 .activities-list-title {
   padding: 1.5rem;
+}
+
+/* 
+SEARCH
+*/
+.accomodations-search {
+  display: inline-flex;
+  margin-top: 1.5rem;
+}
+.accomodations-search-input-field, .accomodations-search-btn {
+  height: 5rem;
+  padding: 1.5rem;
+  font-family: var(--font-family);
+  font-size: var(--font-size--large);
+  font-weight: var(--font-weight--bold);
+}
+.accomodations-search-input-field {
+  border: 1px solid var(--color-sncd--light);
+}
+.accomodations-search-btn {
+  background-color: var(--color-reservia);
+  color: #fff;
+  border-radius: 0 1.5rem 1.5rem 0;
+}
+.accomodations-search-ico {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  background-color: var(--color-sncd--light);
+  border-radius: 1.5REM 0 0 1.5rem;
+  font-size: var(--font-size--large); 
 }

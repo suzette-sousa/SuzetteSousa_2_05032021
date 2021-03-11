@@ -4,10 +4,10 @@
     <title>Reservia - Planification de vos vacances</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/styles.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/0c78ab56ae.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
   <body>
     <header class="header ctn">
@@ -19,31 +19,32 @@
       </nav>
     </header>
     <main class="main ctn">
-      <section class="accomodations-search">
+      <section class="accomodations-search-wrap">
         <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
         <p>En plein centre ou en pleine nature</p>
         <form>
-          <fieldset>
-            <input type="search" />
+          <fieldset class="accomodations-search">
+            <span class="accomodations-search-ico fas fa-map-marker-alt"></span>
+            <input class="accomodations-search-input-field" type="search" placeholder="Lieu" value="Marseille, France" />
             <button class="accomodations-search-btn">Rechercher</button>
           </fieldset>
           <fieldset>
             <legend>Filtres</legend>
             <span>
-              <label for="search-eco">Economique</label>
               <input id="search-eco" type="checkbox" />
+              <label for="search-eco">Economique</label>
             </span>
             <span>
-              <label for="search-family">Familial</label>
               <input id="search-family" type="checkbox" />
+              <label for="search-family">Familial</label>
             </span>
             <span>
-              <label for="search-romantic">Romantique</label>
               <input id="search-romantic" type="checkbox" />
+              <label for="search-romantic">Romantique</label>
             </span>
             <span>
-              <label for="search-animalfriendly">Animaux autorisés</label>
               <input id="search-animalfriendly" type="checkbox" />
+              <label for="search-animalfriendly">Animaux autorisés</label>
             </span>
           </fieldset>
           <p>Plus de 500 logements sont disponibles dans cette ville</p>
