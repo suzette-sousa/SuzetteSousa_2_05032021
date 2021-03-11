@@ -7,6 +7,9 @@ RESET
 *, ::after, ::before {
   box-sizing: border-box;
 }
+html {
+  font-size: 62.5%;
+}
 body, ul, h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
@@ -26,20 +29,12 @@ VARIABLES
   --font-weight--bold: 700;
   --font-weight--normal: 400;
   --font-weight--light: 300;
-  --font-size--small: calc((14/16) * 1rem); /* 14px */
-  --font-size--default: calc((16/16) * 1rem); /* 16px */
-  --font-size--large: calc((18/16) * 1rem); /* 18px */
-  --font-size--xlarge: calc((24/16) * 1rem); /* 24px */
+  --font-size--small: 1.4rem;
+  --font-size--default: 1.6rem;
+  --font-size--large: 1.8rem;
+  --font-size--xlarge: 2.4rem;
   --line-height--default: 1.5;
-  --gutter--xsmall: calc((10/16) * 1rem); /* 10px */
-  --gutter--small: calc((15/16) * 1rem); /* 15px */
-  --gutter--default: calc((20/16) * 1rem); /* 20px */
-  --gutter--large: calc((25/16) * 1rem); /* 25px */
-  --gutter--xlarge: calc((30/16) * 1rem); /* 30px */
-  --gutter--xxlarge: calc((35/16) * 1rem); /* 35px */
-  --gutter--xxxlarge: calc((40/16) * 1rem); /* 40px */
-  --gutter--xxxxlarge: calc((45/16) * 1rem); /* 45px */
-  --rwd-xsmall: calc((375/16) * 1rem); /* 375px */
+  --gutter--default: 2rem;
 }
 
 /*
@@ -141,12 +136,12 @@ HEADER
   justify-content: center;
   align-items: center;
   flex: 1;
-  padding: var( --gutter--xsmall);
+  padding: 1rem;
   border-bottom: 3px solid var(--color-sncd--light);
 }
 @media screen and (min-width: 750px) {
   .header-nav-tabs-link {
-    padding: var( --gutter--xxxxlarge) var( --gutter--large);
+    padding: 4.5rem 2.5rem;
     border-bottom: 0;
   }
 }
@@ -158,4 +153,27 @@ HEADER
   .header-nav-tabs-link--active {
     border-top: 3px solid var(--color-reservia);
   }
+}
+
+/*
+FOOTER
+*/
+.footer-wrap {
+  padding: 4rem 2.5rem 1rem;
+  background-color: var(--color-sncd--light);
+}
+.footer-ctn {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.footer-title {
+  font-size: var(--font-size--large);
+  margin-bottom: 1.5rem;
+}
+.footer-link {
+  display: inline-block;
+  padding: 0.5rem 0;
+}
+.footer-section {
+  margin-bottom: 3rem;
 }
