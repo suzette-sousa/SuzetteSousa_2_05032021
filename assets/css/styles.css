@@ -31,6 +31,15 @@ VARIABLES
   --font-size--large: calc((18/16) * 1rem); /* 18px */
   --font-size--xlarge: calc((24/16) * 1rem); /* 24px */
   --line-height--default: 1.5;
+  --gutter--xsmall: calc((10/16) * 1rem); /* 10px */
+  --gutter--small: calc((15/16) * 1rem); /* 15px */
+  --gutter--default: calc((20/16) * 1rem); /* 20px */
+  --gutter--large: calc((25/16) * 1rem); /* 25px */
+  --gutter--xlarge: calc((30/16) * 1rem); /* 30px */
+  --gutter--xxlarge: calc((35/16) * 1rem); /* 35px */
+  --gutter--xxxlarge: calc((40/16) * 1rem); /* 40px */
+  --gutter--xxxxlarge: calc((45/16) * 1rem); /* 45px */
+  --rwd-xsmall: calc((375/16) * 1rem); /* 375px */
 }
 
 /*
@@ -58,9 +67,95 @@ a {
 }
 a:hover {
   color: var(--color-reservia);
-  text-decoration: underline;
 }
 img {
   max-width: 100%;
   height: auto;
+}
+
+/* ---------------------------------------- */
+/* UTILITIES */
+/* ---------------------------------------- */
+/*
+LAYOUT
+*/
+/* .ctn {
+  padding-left: var(--gutter--default);
+  padding-right: var(--gutter--default);
+} */
+@media screen and (min-width: 600px) {
+  .ctn {
+    max-width: 1340px;
+    margin: auto;
+  }
+}
+/* ---------------------------------------- */
+/* LAYOUT */
+/* ---------------------------------------- */
+/*
+HEADER
+*/
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (min-width: 750px) {
+  .header {
+    flex-wrap: nowrap;
+  }
+}
+.header-logo {
+  grid-area: headerLogo;
+}
+.header-nav {
+  grid-area: headerNav;
+}
+.header-link {
+  grid-area: headerLink;
+  color: var(--color-reservia);
+  font-weight: var(--font-weight--bold);
+}
+@media screen and (min-width: 750px) {
+  .header-link {
+    order: 2;
+  }
+}
+.header-logo, .header-link {
+  padding: var(--gutter--default);
+}
+.header-nav-tabs {
+  display: flex;
+  width: 100%;
+}
+@media screen and (min-width: 750px) {
+  .header-nav-tabs {
+    width: auto;
+    margin-left: auto;
+  }
+}
+.header-nav-tabs-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: var( --gutter--xsmall);
+  border-bottom: 3px solid var(--color-sncd--light);
+}
+@media screen and (min-width: 750px) {
+  .header-nav-tabs-link {
+    padding: var( --gutter--xxxxlarge) var( --gutter--large);
+    border-bottom: 0;
+  }
+}
+.header-nav-tabs-link--active {
+  color: var(--color-reservia);
+  border-color: var(--color-reservia);
+}
+@media screen and (min-width: 750px) {
+  .header-nav-tabs-link--active {
+    border-top: 3px solid var(--color-reservia);
+  }
 }
