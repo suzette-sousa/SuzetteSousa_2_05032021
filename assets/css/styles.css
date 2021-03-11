@@ -36,6 +36,11 @@ VARIABLES
   --line-height--default: 1.5;
   --gutter--default: 2rem;
 }
+@media screen and (min-width: 600px) {
+  :root {
+    --gutter--default: 4rem;
+  }
+}
 
 /*
 CONTENT
@@ -118,7 +123,7 @@ HEADER
   }
 }
 .header-logo, .header-link {
-  padding: var(--gutter--default);
+  padding: 2rem;
 }
 .header-nav-tabs {
   display: flex;
@@ -183,12 +188,13 @@ MAIN STRUCTURE
 */
 .main {
   display: grid;
-  grid-gap: 2rem;
+  grid-gap: 4rem;
   grid-template-areas:
   "accsearch"
   "accpopular"
   "accomodations"
   "activities";
+  margin-bottom: 4.5rem;
 }
 @media screen and (min-width: 600px) {
   .main {
@@ -208,6 +214,98 @@ MAIN STRUCTURE
 .accomodations-popular {
   grid-area: accpopular;
 }
-.activities-wrap {
+.activities {
   grid-area: activities;
+  margin-top: 4.5rem;
+  padding: 2rem;
+}
+@media screen and (min-width: 600px) {
+  .activities {
+    grid-area: activities;
+    margin-top: 4.5rem;
+  }
+}
+@media screen and (min-width: 1480px) {
+  .activities {
+    padding: 0;
+  }
+}
+.main-section-title {
+  margin-bottom: 1.5rem;
+}
+
+/*
+ACCOMODATIONS
+*/
+.accomodations-popular-link {
+  display: flex;
+}
+.accomodations-popular-picture {
+  width: 40%;
+  object-fit: cover;
+}
+.accomodations-popular-content {
+  padding: 1rem 1.5rem 0.5rem;
+}
+.accomodations-main-list {
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.accomodations-main-list li, .accomodations-popular li {
+  background-color: #fff;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 0 15px #ccc;
+  border: 5px solid #fff;
+}
+.accomodations-popular {
+  background-color: var(--color-sncd--light);
+}
+.accomodations-popular ul {
+  display: grid;
+  grid-gap: 3rem;
+}
+.accomodations-main, .accomodations-popular {
+  padding: 2rem;
+}
+@media screen and (min-width: 600px) {
+  .accomodations-main {
+    background-color: var(--color-sncd--light);
+  }
+  .accomodations-main, .accomodations-popular {
+    padding: 4rem;
+    border-radius: 2rem;
+  }
+}
+
+/*
+ACTIVITIES
+*/
+.activities-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(304px, 1fr));
+  grid-gap: 4rem;
+}
+.activities-list-item {
+  display: block;
+  background-color: #fff;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 0 15px #ccc;
+}
+.activities-list-img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+@media screen and (min-width: 768px) {
+  .activities-list-item1 img,
+  .activities-list-item4 img {
+    width: auto;
+    height: calc(100% - 5.5rem);
+  }
+}
+.activities-list-title {
+  padding: 1.5rem;
 }
