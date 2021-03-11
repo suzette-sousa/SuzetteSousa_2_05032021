@@ -177,3 +177,37 @@ FOOTER
 .footer-section {
   margin-bottom: 3rem;
 }
+
+/*
+MAIN STRUCTURE
+*/
+.main {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-areas:
+  "accsearch"
+  "accpopular"
+  "accomodations"
+  "activities";
+}
+@media screen and (min-width: 600px) {
+  .main {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+    "accsearch accsearch"
+    "accomodations accpopular"
+    "activities activities";
+  }
+}
+.accomodations-search {
+  grid-area: accsearch;
+}
+.accomodations-main {
+  grid-area: accomodations;
+}
+.accomodations-popular {
+  grid-area: accpopular;
+}
+.activities-wrap {
+  grid-area: activities;
+}
