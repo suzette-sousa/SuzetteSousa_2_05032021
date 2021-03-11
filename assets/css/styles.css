@@ -334,6 +334,7 @@ SEARCH
 .accomodations-search {
   display: inline-flex;
   margin-top: 1.5rem;
+  position: relative;
 }
 .accomodations-search-input-field, .accomodations-search-btn {
   height: 5rem;
@@ -343,12 +344,33 @@ SEARCH
   font-weight: var(--font-weight--bold);
 }
 .accomodations-search-input-field {
+  padding-right: 4rem;
   border: 1px solid var(--color-sncd--light);
 }
 .accomodations-search-btn {
+  position: absolute;
+  right: -1.5rem;
   background-color: var(--color-reservia);
   color: #fff;
-  border-radius: 0 1.5rem 1.5rem 0;
+  border-radius: 1.5rem;
+}
+.accomodations-search-btn-txt {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .accomodations-search-input-field {
+    padding-right: 1.5rem;
+  }
+  .accomodations-search-btn {
+    position: initial;
+    border-radius: 0 1.5rem 1.5rem 0;
+  }
+  .accomodations-search-btn-ico {
+    display: none;
+  }
+  .accomodations-search-btn-txt {
+    display: inline-block;
+  }
 }
 .accomodations-search-ico {
   display: flex;
