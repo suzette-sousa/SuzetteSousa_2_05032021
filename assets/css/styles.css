@@ -379,7 +379,7 @@ SEARCH
   width: 5rem;
   background-color: var(--color-sncd--light);
   border-radius: 1.5REM 0 0 1.5rem;
-  font-size: var(--font-size--large); 
+  font-size: var(--font-size--large);
 }
 /*
 FILTERS
@@ -424,9 +424,28 @@ FILTERS
   border: 2px solid #d9d9d9;
   border-radius: 3rem;
 }
+.accomodations-info {
+  display: flex;
+}
+.accomodations-info-ico {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-right: 1rem;
+  color: var(--color-reservia);
+  font-size: var(--font-size--xsmall);
+  border: 1px solid #d9d9d9;
+  border-radius: 3rem;
+}
 
+/* ---------------------------------------- */
+/* COMPONENTS */
+/* ---------------------------------------- */
 /*
-COMPONENTS
+RATINGS
 */
 .ratings-wrap {
   font-size: var(--font-size--xsmall); 
