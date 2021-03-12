@@ -26,6 +26,7 @@ button {
   -moz-appearance: none;
   appearance: none;
   border: none;
+  cursor: pointer;
 }
 input[type="checkbox"] {
   position: absolute;
@@ -40,6 +41,7 @@ VARIABLES
 :root {
   --color-reservia: #0065fc;
   --color-reservia--light: #deebff;
+  --color-reservia--dark: #0054d3;
   --color-sncd--light: #f2f2f2;
   --color-font--default: #111;
   --font-family: 'Raleway', sans-serif;
@@ -353,6 +355,9 @@ SEARCH
   background-color: var(--color-reservia);
   color: #fff;
   border-radius: 1.5rem;
+}
+.accomodations-search-btn:hover {
+  background-color: var(--color-reservia--dark);
 }
 .accomodations-search-btn-txt {
   display: none;
