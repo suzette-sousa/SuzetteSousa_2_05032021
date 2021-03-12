@@ -125,6 +125,13 @@ LAYOUT
     margin: auto;
   }
 }
+/* @media screen and (min-width: 960px) {
+  .ctn {
+    width: 85vw;
+    max-width: 1340px;
+    margin: auto;
+  }
+} */
 
 /* ---------------------------------------- */
 /* LAYOUT */
@@ -264,7 +271,6 @@ MAIN STRUCTURE
 }
 @media screen and (min-width: 600px) {
   .activities {
-    grid-area: activities;
     margin-top: 4.5rem;
   }
 }
@@ -305,13 +311,6 @@ ACCOMODATIONS
   grid-gap: 3rem;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
-.accomodations-main-list li, .accomodations-popular li {
-  background-color: #fff;
-  border-radius: 1.5rem;
-  overflow: hidden;
-  box-shadow: 0 0 15px #ccc;
-  border: 5px solid #fff;
-}
 .accomodations-popular {
   background-color: var(--color-sncd--light);
 }
@@ -340,7 +339,7 @@ ACTIVITIES
   grid-template-columns: repeat(auto-fit, minmax(304px, 1fr));
   grid-gap: 4rem;
 }
-.activities-list-item {
+/* .activities-list-item {
   display: block;
   background-color: #fff;
   border-radius: 1.5rem;
@@ -361,7 +360,7 @@ ACTIVITIES
 }
 .activities-list-title {
   padding: 1.5rem;
-}
+} */
 
 /* 
 SEARCH
@@ -516,4 +515,71 @@ RATINGS
 }
 .ratings--off {
   color: #d9d9d9;
+}
+/*
+CARDS
+*/
+.card-wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 14.5rem;
+  background-color: #fff;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 0 15px #ccc;
+}
+.card-wrap-princ {
+  border: 5px solid #fff;
+}
+.card-img-wrap {
+  display: flex;
+  overflow: hidden;
+}
+.card-img {
+  object-fit: cover;
+}
+.card-wrap:hover {
+  box-shadow: 0 0 3px var(--color-reservia);
+}
+.card-wrap:hover .card-img {
+  transform: scale(1.1);
+  transition: all .3s ease;
+}
+.card-wrap-princ-imgleft {
+  flex-direction: row;
+}
+.card-img-wrap-princ-imgleft {
+  flex: 0 0 40%;
+}
+.card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-content-princ-imgleft {
+  padding: 1rem 1.5rem 0.5rem;
+}
+.card-title {
+  font-size: var(--font-size--default);
+  line-height: 1.2;
+}
+.card-txt {
+  font-size: var(--font-size--small);
+  margin-top: 0.5rem;
+  margin-bottom: auto;
+}
+.card-img-wrap-princ-imgtop {
+  max-height: 11.5rem;
+}
+.card-content-princ-imgtop {
+  padding: 1rem 1rem 0;
+}
+.card-ratings {
+  margin-top: 0.5rem;
+}
+.card-content-sncd {
+  padding: 2rem 1.5rem 1.6rem;
+}
+.card-img-wrap-sncd {
+  height: calc(100% - 5.5rem);
 }
