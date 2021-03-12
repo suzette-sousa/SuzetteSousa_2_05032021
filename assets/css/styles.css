@@ -227,6 +227,12 @@ MAIN STRUCTURE
 }
 .accomodations-search-wrap {
   grid-area: accsearch;
+  padding: 2rem 2rem 0;
+}
+@media screen and (min-width: 1480px) {
+  .accomodations-search-wrap {
+    padding: 0;
+  }
 }
 .accomodations-main {
   grid-area: accomodations;
