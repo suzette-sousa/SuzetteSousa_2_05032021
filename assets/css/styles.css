@@ -394,11 +394,22 @@ FILTERS
 }
 .accomodations-filter {
   position: relative;
-  margin-bottom: 1rem;
+  margin: 0.5rem 1rem 0.5rem 0;
+}
+@media screen and (min-width: 768px) {
+  .accomodations-filter {
+    margin: 0.5rem 2.5rem 0.5rem 0;
+  }
 }
 .accomodations-filters-legend {
-  margin-right: 2.5rem;
+  width: 100%;
+  margin: 0.5rem 2.5rem 0.5rem 0;
   font-weight: var(--font-weight--bold);
+}
+@media screen and (min-width: 768px) {
+  .accomodations-filters-legend {
+    width: auto;
+  }
 }
 .accomodations-filter-ico {
   position: absolute;
@@ -411,18 +422,30 @@ FILTERS
   height: 5rem;
   background-color: var(--color-reservia--light);
   color: var(--color-reservia);
+  font-size: var(--font-size--large);
   border-radius: 3rem;
+  pointer-events: none;
 }
 .accomodations-filter-label {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   height: 5rem;
-  margin-right: 2.5rem;
   padding: 1rem 2rem 1rem 6rem;
   font-weight: var(--font-weight--bold);
   border: 2px solid #d9d9d9;
   border-radius: 3rem;
+  cursor: pointer;
+}
+.accomodations-filter-input:checked + .accomodations-filter-label {
+  background-color: var(--color-sncd--light);
+  padding: 1rem 6rem 1rem 2rem;
+}
+.accomodations-filter-input:checked ~ .accomodations-filter-ico {
+  right: 0;
+  left: initial;
+  background-color: var(--color-reservia);
+  color: var(--color-reservia--light);
 }
 .accomodations-info {
   display: flex;
