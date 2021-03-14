@@ -266,12 +266,11 @@ MAIN STRUCTURE
 }
 .activities {
   grid-area: activities;
-  margin-top: 4.5rem;
   padding: 2rem;
 }
 @media screen and (min-width: 600px) {
   .activities {
-    margin-top: 4.5rem;
+    margin-top: 1.5rem;
   }
 }
 @media screen and (min-width: 1480px) {
@@ -329,6 +328,27 @@ ACCOMODATIONS
     padding: 4rem;
     border-radius: 2rem;
   }
+}
+.togglemore-label {
+  display: inline-block;
+  margin-top: 3rem;
+  font-weight: var(--font-weight--bold);
+}
+.togglemore-input ~ .togglemore-label {
+  display: inline-block;
+}
+.togglemore-input ~ .togglemore-label::before {
+  content: "Afficher plus";
+}
+.togglemore-input ~ .togglemore-wrap {
+  display: none;
+}
+.togglemore-input:checked ~ .togglemore-label::before {
+  content: "Afficher moins";
+}
+.togglemore-input:checked ~ .togglemore-wrap {
+  display: grid;
+  margin-top: 4rem;
 }
 
 /*
