@@ -191,12 +191,14 @@ HEADER
 }
 .header-logo {
   grid-area: headerLogo;
+  padding: 2rem var(--gutter-wrap);
 }
 .header-nav {
   grid-area: headerNav;
 }
 .header-link {
   grid-area: headerLink;
+  padding: 2rem;
   color: var(--color-reservia);
   font-weight: var(--font-weight--bold);
 }
@@ -204,9 +206,6 @@ HEADER
   .header-link {
     order: 2;
   }
-}
-.header-logo, .header-link {
-  padding: 2rem;
 }
 .header-nav-tabs {
   display: flex;
