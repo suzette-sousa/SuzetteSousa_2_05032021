@@ -599,7 +599,7 @@ FILTERS
 }
 .accomodations-filter-ico {
   position: absolute;
-  left: 0;
+  left: -2px;
   top: 0;
   display: inline-flex;
   justify-content: center;
@@ -623,12 +623,18 @@ FILTERS
   border-radius: 3rem;
   cursor: pointer;
 }
+.accomodations-filter-label:hover + .accomodations-filter-ico {
+  left: 0;
+}
+.accomodations-filter-input:checked + .accomodations-filter-label:hover + .accomodations-filter-ico {
+  right: 0;
+}
 .accomodations-filter-input:checked + .accomodations-filter-label {
   background-color: var(--color-sncd--light);
   padding: 1rem 6rem 1rem 2rem;
 }
 .accomodations-filter-input:checked ~ .accomodations-filter-ico {
-  right: 0;
+  right: -2px;
   left: initial;
   background-color: var(--color-reservia);
   color: var(--color-reservia--light);
