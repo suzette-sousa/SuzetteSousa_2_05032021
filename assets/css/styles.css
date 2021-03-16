@@ -393,16 +393,19 @@ ACCOMODATIONS
 }
 .accomodations-popular-list {
   display: grid;
+  grid-template-rows: repeat(3, 14.5rem);
   grid-gap: var(--gutter-inner--small);
 }
 @media screen and (min-width: 769px) {
   .accomodations-popular-list {
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 14.5rem;
   }
 }
 @media screen and (min-width: 1200px) {
   .accomodations-popular-list {
     grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 14.5rem);
   }
 }
 .accomodations-main, .accomodations-popular {
