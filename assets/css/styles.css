@@ -83,15 +83,6 @@ VARIABLES
   }
 }
 
-.wrap-hspacing {
-  padding-left: var(--gutter-wrap);
-  padding-right: var(--gutter-wrap);
-}
-.wrap-inner-hspacing-large {
-  padding-left: var(--gutter-inner--large);
-  padding-right: var(--gutter-inner--large);
-}
-
 /*
 CONTENT
 */
@@ -129,33 +120,6 @@ img {
 /*
 LAYOUT
 */
-/* .ctn {
-  padding-left: var(--gutter--default);
-  padding-right: var(--gutter--default);
-} */
-
-/* .ctn {
-  max-width: 768px;
-  margin: auto;
-}
-@media screen and (min-width: 960px) {
-  .ctn {
-    max-width: 940px;
-    margin: auto;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .ctn {
-    max-width: 1024px;
-    margin: auto;
-  }
-}
-@media screen and (min-width: 1500px) {
-  .ctn {
-    max-width: 1340px;
-    margin: auto;
-  }
-} */
 @media screen and (min-width: 960px) {
   .ctn {
     width: calc(100% - 10rem);
@@ -163,14 +127,14 @@ LAYOUT
     margin: auto;
   }
 }
-
-/* @media screen and (min-width: 960px) {
-  .ctn {
-    width: 85vw;
-    max-width: 1340px;
-    margin: auto;
-  }
-} */
+.wrap-hspacing {
+  padding-left: var(--gutter-wrap);
+  padding-right: var(--gutter-wrap);
+}
+.wrap-inner-hspacing-large {
+  padding-left: var(--gutter-inner--large);
+  padding-right: var(--gutter-inner--large);
+}
 
 /* ---------------------------------------- */
 /* LAYOUT */
@@ -279,27 +243,7 @@ MAIN STRUCTURE
     padding-bottom: 6.5rem;
   }
 }
-/* .main {
-  display: grid;
-  grid-gap: 4rem;
-  grid-template-areas:
-  "accsearch"
-  "accpopular"
-  "accomodations"
-  "activities";
-  margin-bottom: 4.5rem;
-}
-@media screen and (min-width: 600px) {
-  .main {
-    grid-template-columns: 2fr 1fr;
-    grid-template-areas:
-    "accsearch accsearch"
-    "accomodations accpopular"
-    "activities activities";
-  }
-} */
 .accomodations-search-wrap {
-  /* grid-area: accsearch; */
   padding-top: 2rem;
 }
 @media screen and (min-width: 769px) {
@@ -325,26 +269,11 @@ MAIN STRUCTURE
     order: 1;
   }
 }
-/* .accomodations-main {
-  grid-area: accomodations;
-}
-.accomodations-popular {
-  grid-area: accpopular;
-}
-.activities {
-  grid-area: activities;
-  padding: 2rem;
-} */
 @media screen and (min-width: 600px) {
   .activities {
     margin-top: 1.5rem;
   }
 }
-/* @media screen and (min-width: 1480px) {
-  .activities {
-    padding: 0;
-  }
-} */
 .main-section-title {
   margin-bottom: 2rem;
 }
@@ -362,21 +291,9 @@ MAIN STRUCTURE
 /*
 ACCOMODATIONS
 */
-/* .accomodations-popular-link {
-  display: flex;
-}
-.accomodations-popular-picture {
-  width: 40%;
-  object-fit: cover;
-} */
-/* .accomodations-popular-content {
-  padding: 1rem 1.5rem 0.5rem;
-} */
 .accomodations-main-list {
   display: grid;
   grid-gap: var(--gutter-inner--small);
-  /* grid-template-columns: repeat(3, 1fr); */
-  /* grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); */
 }
 @media screen and (min-width: 426px) {
   .accomodations-main-list {
@@ -453,7 +370,6 @@ ACTIVITIES
 */
 .activities-list {
   display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(304px, 1fr)); */
   grid-gap: var(--gutter-inner--large);
   grid-template-rows: repeat(6, 19rem);
 }
@@ -494,28 +410,6 @@ ACTIVITIES
     grid-area: 3 / 4 / 5 / 5;
   }
 }
-/* .activities-list-item {
-  display: block;
-  background-color: #fff;
-  border-radius: 1.5rem;
-  overflow: hidden;
-  box-shadow: 0 0 15px #ccc;
-}
-.activities-list-img {
-  display: block;
-  width: 100%;
-  object-fit: cover;
-}
-@media screen and (min-width: 768px) {
-  .activities-list-item1 img,
-  .activities-list-item4 img {
-    width: auto;
-    height: calc(100% - 5.5rem);
-  }
-}
-.activities-list-title {
-  padding: 1.5rem;
-} */
 
 /* 
 SEARCH
@@ -740,6 +634,3 @@ CARDS
 .card-content-sncd {
   padding: 2rem 1.5rem 1.6rem;
 }
-/* .card-img-wrap-sncd {
-  height: calc(100% - 5.5rem);
-} */
