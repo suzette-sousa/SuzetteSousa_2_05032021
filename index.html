@@ -26,13 +26,13 @@
       <section class="accomodations-search-wrap ctn wrap-hspacing">
         <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
         <p>En plein centre ou en pleine nature</p>
-        <form>
-          <fieldset class="accomodations-search">
+        <form method="POST" action="/search">
+          <div class="accomodations-search">
             <span class="accomodations-search-ico fas fa-map-marker-alt"></span>
             <input class="accomodations-search-input-field" type="search" placeholder="Lieu" value="Marseille, France" />
             <button class="accomodations-search-btn"><span class="accomodations-search-btn-ico fas fa-search"></span><span class="accomodations-search-btn-txt">Rechercher</span></button>
-          </fieldset>
-          <fieldset>
+          </div>
+          <div>
             <div class="accomodations-filters">
               <span class="accomodations-filters-legend">Filtres</span>
               <span class="accomodations-filter">
@@ -56,7 +56,7 @@
                 <span class="accomodations-filter-ico fas fa-dog"></span>
               </span>
             </div>
-          </fieldset>
+          </div>
           <p class="accomodations-info">
             <span class="accomodations-info-ico fas fa-info"></span>
             Plus de 500 logements sont disponibles dans cette ville
